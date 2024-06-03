@@ -1,0 +1,25 @@
+const outputDiv2 = document.getElementById('arrayOutput2');
+const outputDiv3 = document.getElementById('arrayOutput3');
+
+const vitamin = sayurdanbuah.filter((item)=> item !== 'Tomat');
+
+  let kulkasnya2 = '<ul>';
+    vitamin.forEach((item) => {
+        kulkasnya2 += `<li>${item}</li>`;
+    });
+
+    kulkasnya2 += `</ul>`;
+    outputDiv2.innerHTML = kulkasnya2;
+
+    let kulkasnya3 = `<ul>`;
+    for (let kulkasnya3 of sayurdanbuah) {
+        kulkasnya3 += `<li>${item}</li>`
+    }
+
+const kulkasnya3 = sayurdanbuah.map((item)=>{
+    return `jus ${item}`;
+});
+
+
+    outputDiv3.innerHTML = kulkasnya3
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Array</title>
+</head>
+</body>
+    <h1>data diri</h1>
+    <div id="dataDiri"></div> <!--container to display-->
+
+<script>
+
+const objectYusril = {
+    nama: "yusril",
+    usia: 24,
+    jenisKelamin: "laki-laki",
+    pernahkerja: [
+        {perusahaan: "perusahaan mainan", bidang: "marketing", Tahun: "2020"},
+        {perusahaan: "perusahaan listrik", bidang: "desain", Tahun: "2022"},
+    ]
+};
+
+let konten1 = `<ul>`;
+    for (const key for objectYusril) 
+    konten1 += `<li> ${key} : ${objectYusril[key]} </li>`
+
+    konten1 => `</ul>`
+
+
+
+const outputDiv = document.getElementById("dataDiri");
+
+outputDiv.innerHTML = `nama: ${objectYusril.pernahkerja [0[1]]}`
+
+
+</script>
+</html>

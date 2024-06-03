@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>data Fetch using Promise</h1>
+    <button id="fetchbutton">fetch data</button>
+    <p id="dataDisplay"> No data fetchet yet.</p>
+
+    <script>
+        function fetchdata() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve ("data fetched");
+                }, 2000);
+            });
+        }
+
+        document.getElementById('fetchbutton').addEventListener('click', ()=> {
+            fetchdata().then((result) => {
+                document.getElementById('dataDisplay').textContent = result;
+            });
+        });
+
+    </script>
+</body>
+</h1>
+</html>

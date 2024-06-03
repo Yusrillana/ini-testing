@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<html>
+    <body>
+        <h1>Praktek Nih </h1>
+    
+        <button onclick="synchronous()">ini pake synchronous</button>
+        <button onclick="asynchronous()">ini pake asynchcronous</button>
+        <button onclick="popup()">klik ini </button>
+    
+             <p id="synchronous"></p>
+            <p id="asynchcronous"></p>
+        
+         <script>
+            function popup () {
+                alert = ("harap bersabar");
+            }
+        
+            function synchronous() {
+                document.getElementById('synchronous').innerHTML = "proses sedang dimulai"
+        
+                const start = date.now();
+                while (date.now() - start < 3500) {
+                }
+            }
+            document.getElementById('asynchronous').innerHTML = "data sudah terkumpul"
+            
+            function asynchronous() {
+                document.getElementById ('asynchronous').innerHTML = "proses asyncronous sedang dimulai"
+        
+                setTimeout(() => {
+                    document.getElementById ('asynchronous').innerHTML = "proses Asynchcronous sudah selesai";
+                }, 3000);
+            }
+        </script>
+        
+    </body>
+</html>
+

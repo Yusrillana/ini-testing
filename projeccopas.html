@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: rgb(232, 167, 2);
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    layout width: 1920px;
+height: 0px;
+top: 0px;
+bottom: unset;
+padding: 56px 136px 45px 136px;
+gap: 0px;
+border-radius: 0px 0px 0px 0px;
+opacity: 40px;
+    ">PEMESANAN MAKANAN</h1>
+    <h3 style="color: rgb(0, 0, 0);
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    layout width: 1920px;
+height: 0px;
+top: 0px;
+bottom: unset;
+padding: 0px 13px 15px 136px;
+gap: 0px;
+border-radius: 0px 0px 0px 0px;
+opacity: 40px;"
+>LIST MENU YANG KITA JUAL BESERTA DURASI MASAK</h3>
+        <li style= "padding: 6px 42px 0px 136px;";
+        >Burger = 3 detik </li>
+        <li style= "padding: 6px 42px 0px 136px;";
+        >Ayam Goreng = 5 detik </li>
+        <li style= "padding: 6px 42px 20px 136px;";>Nasi Padang = 15 detik </li>
+    <button onclick="pesanmakanan()",;
+   
+    >mau pesan apa? </button
+    ><div id="result"></div>
+
+    <script>
+        async function pesanmakanan(){
+            const makanan = prompt("Pilih Pesanan Anda").toLocaleLowerCase();
+            let waktutunggu
+
+            switch (makanan) {
+                case 'burger': 
+                    waktutunggu = 3000;
+                    console.log('burger sedang diproses');
+                    break;
+                case 'ayam goreng':
+                    waktutunggu = 5000;
+                    console.log('ayam goreng sedang diproses')
+                    break
+                case 'nasi padang':
+                    waktutunggu =15000;
+                    console.log('nasi padang sedang diproses')
+                    break;
+                default:
+                    document.getElementById('result').innerText = "kita gak jualan itu bro";
+                    return;
+            }
+            document.getElementById('result').innerText = `${makanan} sedang dalam penggorengan, harap ditunggu`;
+
+            await new Promise(resolve => setTimeout (resolve, waktutunggu));
+
+            document.getElementById ('result').innerText = `${makanan} sudah siap. silahkan diambil.`;
+            console.log(`${makanan} selesai`)
+        }
+    </script>
+</body>
+</html>
